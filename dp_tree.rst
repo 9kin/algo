@@ -1,15 +1,132 @@
 Дп на поддеревьях
 """""""""""""""""
 
+:math:`O(V + E)` Задача о независимом множестве
+""""""""""""""""""""""""""""""""""""""""""""""""
 
-Задача о паросочетании максимального веса в дереве
-""""""""""""""""""""""""""""""""""""""""""""""""""
+#. * dp[u][0] - максимальное множество без вершины :math:`u`
 
-`lol <https://neerc.ifmo.ru/wiki/index.php?title=%D0%94%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8%D0%BA%D0%B0_%D0%BF%D0%BE_%D0%BF%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D1%8C%D1%8F%D0%BC>`_
+   * dp[u][1] - максимальное множество с вершиной :math:`u`
 
-Можно использовать динамическое программирование, время работы алгоритма с которым улучшается до :math:`O(n)`
+#. :math:`v` - дети вершины :math:`u`
 
-Пусть задано взвешенное дерево, с весами, обозначенными как :math:`w_{i,j}`, где :math:`i` и :math:`j` — вершины дерева, соединённые ребром.. Необходимо составить такое паросочетание, чтобы суммарный вес всех рёбер, входящих в него, был максимальным.
+   * dp[u][0] = sum(max(dp[v][0], dp[v][1]))
 
-Обозначим :math:`a[i]` как паросочетание максимального веса в поддереве с корнем в :math:`i`-той вершине, при этом :math:`i`-тая вершина соединена ребром, входящим в паросочетание, с вершиной, входящей в поддерево :math:`i`-ой вершины; аналогично :math:`b[i]` — как паросочетание максимального веса в поддерева с корнем в :math:`i`-той вершине, но только при этом :math:`i`-тая вершина соединена ребром, входящим в паросочетание, с вершиной, не входящей в поддерево :math:`i`-ой вершины; а :math:`c[i]=max(a[i],b[i])`, таким образом, ответ на задачу будет находиться в :math:`c[root]`, где :math:`root` — корень дерева. Идея динамического программирования здесь состоит в том, что для того, чтобы найти паросочетание максимального веса с корнем в вершине :math:`i`, нам необходимо найти максимальное паросочетание для всех поддеревьев :math:`i`-ой вершины.
+   * dp[u][1] = sum(dp[v][0]) + 1
 
+#. * обычный dfs 
+   
+   * пересчёт dp[u]
+
+Невзвешанное дерево (вес 1)
+===========================
+
+
+.. image:: https://i.imgur.com/7eBP9Pj.png
+
+
+
+.. code-block:: cpp
+
+	#include <bits/stdc++.h>
+ 
+	using namespace std;
+	 
+	typedef long long ll;
+	 
+	vector<bool> used;
+	vector<pair<ll, ll>> dp;
+	vector<vector<ll>> v;
+	 
+	void dfs(ll u) {
+	    used[u] = true;
+	    for (auto q : v[u]) {
+	        dfs(q);
+	    }
+	    ll sum1 = 0, sum0 = 0;
+	    for (auto q: v[u]) {
+	        dp[u].second += dp[q].first;
+	        dp[u].first += max(dp[q].first, dp[q].second);
+	    }
+	    dp[u].second++;
+	}
+	 
+	int main() {
+	    ios::sync_with_stdio(0);
+	    cin.tie(0);
+	    ll n, x, root;
+	    cin >> n;
+	    used.resize(n);
+	    dp.resize(n);
+	    v.resize(n);
+	    for (int i = 0; i < n; i++) {
+	        cin >> x;
+	        if (x == 0) {
+	            root = i;
+	        } else {
+	            x--;
+	            v[x].push_back(i);
+	        }
+	    }
+	    dfs(root);
+	    cout << max(dp[root].first, dp[root].second);
+	    return 0;
+	}
+
+
+Взвешанное дерево 
+==================
+Добавим в случае dp[u].second += w[u];
+
+.. image:: https://i.imgur.com/aiwhCMB.png
+
+.. code-block:: cpp
+
+	#include <bits/stdc++.h>
+	 
+	using namespace std;
+	 
+	typedef long long ll;
+	 
+	vector<bool> used;
+	vector<pair<ll, ll>> dp;
+	vector<vector<ll>> v;
+	vector<ll> w;
+	 
+	void dfs(ll u) {
+	    used[u] = true;
+	    for (auto q : v[u]) {
+	        dfs(q);
+	    }
+	    ll sum1 = 0, sum0 = 0;
+	    for (auto q: v[u]) {
+	        dp[u].second += dp[q].first;
+	        dp[u].first += max(dp[q].first, dp[q].second);
+	    }
+	    dp[u].second += w[u];
+	}
+	 
+	int main() {
+	    ios::sync_with_stdio(0);
+	    cin.tie(0);
+	    ll n, x, root, y;
+	    cin >> n;
+	    used.resize(n);
+	    dp.resize(n);
+	    v.resize(n);
+	    w.resize(n);
+	    for (int i = 0; i < n; i++) {
+	        cin >> x >> y;
+	        w[i] = y;
+	        if (x == 0) {
+	            root = i;
+	 
+	        } else {
+	            x--;
+	            v[x].push_back(i);
+	        }
+	    }
+	    dfs(root);
+	    cout << max(dp[root].first, dp[root].second);
+	    return 0;
+	}
