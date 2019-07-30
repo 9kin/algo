@@ -68,7 +68,6 @@ html_theme_options = {
 }
 
 
-html_theme_path = ["../.."]
 html_logo = "static/logo.svg"
 
 
