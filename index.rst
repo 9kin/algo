@@ -1,6 +1,9 @@
 algo
 """"""""
 
+`формулы <physics/formula.html>`_
+
+
 TODO
 ~~~~~
 
