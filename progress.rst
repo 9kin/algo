@@ -11,7 +11,9 @@ lol
 
 new commit
 """"""""""""
-#. `<treap.html>`http://www.e-maxx-ru.1gb.ru/algo/treap  
+#. `<conf.html>`_
+
+#. `<treap.html>`_
 
 #. `Разреженная таблица <sparse_table.html>`_ (code) & formula st[i][j] from https://neerc.ifmo.ru/wiki/index.php?title=Решение_RMQ_с_помощью_разреженной_таблицы
 
@@ -29,10 +31,16 @@ old commit's
 
 #. `<geometry.html>`_ 100
 
-#. `<dp_tree.html>`_ ?? Задача о независимом множестве +
+#. `<dp_tree.html>`_ ?? Парсочи Задача о независимом множестве +
 
 #. `<dp_mn.html>`_ 0
 
 #. `<dp.html>`_ 50 ???
 
+
+TODO:
+
+dp_tree code from gate
+
+sparse_table code from gate
 

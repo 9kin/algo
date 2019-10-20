@@ -1,49 +1,83 @@
-lshop-2019
-==========
+algo
+""""""""
 
 TODO
-""""
+~~~~~
 
 `here <progress.html>`_
 
+links
+~~~~~~
+
+`rst <https://sphinx-ru.readthedocs.io/ru/latest/rst-markup.html>`_
+
+`emaxx-ru <https://e-maxx.ru/algo>`_
+
+`emaxx-eng + algs <https://cp-algorithms.com>`_
+
+`gate_sic <https://sicamp.ru/gate_sic>`_ 
+
+`gate_task to rst <gate_sic.html>`_
+
+`cf <cf.html>`_
 
 
-* `СНМ <dsu.html>`_
+`<https://github.com/indy256/codelibrary>`_
 
-* `Дерево отрезков <do.html>`_
+`<https://github.com/Ashishgup1/Competitive-Coding/>`_
 
-* `Геометрия <geometry.html>`_
+Articles
+"""""""""""
 
-* `Динамическое программирование <dp.html>`_
+Algebra
+~~~~~~~~~~~
 
+Data Structures
+~~~~~~~~~~~~~~~
 
-`pcms
-<https://pcms.university.innopolis.ru/pcms2client/>`_
+* Основы
+     * `Минимальный Стек / Минимальная Очередь <data_structures/stack_queue_modification.html>`_
 
-#. Строки
-    * хеши
-    * алгоритм робина-карта
-    * `Префикс фунция и Алгоритм Кнута-Морриса-Пратта <prefix_func.html>`_
-    * `z-функция <z_func.html>`_
-    * бор
-#. dfs
-    * dfs
-    * Мосты
-    * Компоненты сильной свзаности
-    * точеи сочлинения
-    * 2-SAT
-#. bfs, dijkstra
-    * bfs
-    * dijkstra
-    * Флойд
-    * Форд-Белман
-#. dsu & Остов
-    * Алгортим прима
-    * СНМ
-    * Алгоритм Краскала
-    * Алгоритм Борувки
-
-#. Geometry
+     * `Разреженные Таблицы <data_structures/sparse_table.html>`_
 
 
+* Trees
+	* `DSU <data_structures/dsu.html>`_  100 Алгоритм Крускала (code)
 
+
+	* Fenwick Tree
+
+	* Sqrt Decomposition
+
+	* Segment Tree
+
+	* `Treap <data_structures/treap.html>`_
+
+	* Sqrt Tree
+
+	* Randomized Heap
+
+	* Dynamic Programming
+
+~~~~~~~~~~~~~~~~~~~~~~
+
+String Processing
+~~~~~~~~~~~~~~~~~~
+
+Linear Algebra
+~~~~~~~~~~~~~~~~
+
+Combinatorics
+~~~~~~~~~~~~~~~
+
+Numerical Methods
+~~~~~~~~~~~~~~~~~~~
+
+Geometry
+~~~~~~~~~~
+
+Graphs
+~~~~~~~~~~
+
+Miscellaneous
+~~~~~~~~~~~~~~~
