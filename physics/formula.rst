@@ -35,23 +35,28 @@ _________________________________________
 
 	y = max \rightarrow v_y  = 0 \rightarrow v_0 \sin \alpha -gt_{под} = 0
 
-	V_0 = \frac{tg}{\sin \alpha}
+	V_0 = \frac{t_{под}g}{\sin \alpha}
 
-	H_{max} = \frac{v_0 ^ 2 \sin ^ 2 \alpha}{2}
+	t_{под} = \frac{v_0 \sin \alpha}{g}
+	
+	H_{max} = y(при t =t_{под}) = v \sin \alpha t_{под} - \frac{g * t_{под} ^ 2}{2}  = v_o \sin \alpha * \frac{v_0 \sin \alpha}{g} - \frac{g}{2} * \frac{v_0 ^ 2 \sin ^ 2  \alpha}{g^2} = \frac{v_0 ^ 2 \sin ^ 2 \alpha}{2}
 
 _________________________________________
 
 .. math::
 	
-	
 	t{пол} = 2 t{под}
 	
+	y = 0 \rightarrow v_0 \sin \alpha  - \frac{gt^2}{2} \rightarrow t{пол} = \frac{2v_o \sin \alpha }{g}
+
+	2 \sin \alpha * \cos \alpha = \sin 2 \alpha \rightarrow L = v_x * t_{пол} = v_0 \cos \alpha * \frac{2v_o \sin \alpha }{g} = \frac{v_o ^ 2 \sin 2 \alpha}{g}
 	
-	t{пол} = \frac{2v_{0y}}{g}  = \frac{2v_o \sin \alpha}{g}
-	
-	L = v_x * t = \frac{2v_{0x} * v_{0y}}{g} = \frac{v_o^2 \sin 2 \alpha}{g}
+	L_{max} \rightarrow 2 \alpha = \rightarrow 1 \alpha = 45
 
 	\tan \alpha = \frac{v_y}{v_x}
+	
+
+	
 
 	
 	
