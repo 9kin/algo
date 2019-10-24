@@ -1,6 +1,8 @@
 Движение тела, брошенного горизонтально.
 """"""""""""""""""""""""""""""""""""""""""
 
+http://primat.org/mathred/mathred.html
+
 .. math::
 
 	\begin{cases} v_x = v_0 \\ v_y = -gt \end{cases}
@@ -15,7 +17,7 @@
 
 	x_к = v_0 * \sqrt{\frac{2h_0}{g}}
 
-	v_к = \sqrt{v_x ^ 2 + v_y ^ 2} \rightarrow v_к = \sqrt{v_0 ^ 2 + (gt)^2} = \sqrt{v_0 + 2gh}
+	v_к = \sqrt{v_x ^ 2 + v_y ^ 2}  = \sqrt{v_0 ^ 2 + (gt)^2} = \sqrt{v_0 ^ 2 + 2gh}
 
 	\tan \alpha_к = \frac{v_y}{v_x} = -\frac{gt}{v_0} = - \frac{\sqrt{2gh}}{v_0}
 
@@ -56,7 +58,20 @@ _________________________________________
 	\tan \alpha = \frac{v_y}{v_x}
 	
 
+Движение тела, брошенного горизонтально.
+"""""""""""""""""""""""""""""""""""""""""""
+
+.. math::
 	
+	x = x_0 + V_{0x} * t + \frac{a_x t ^ 2}{2}
+
+	x_0=h_0, v_{0x}=0, a_x=g \rightarrow x = h - \frac{gt^2}{2}
+
+	v_x = v_{0x}+a_xt=-gt
+
+	x=0, h - \frac{gt_п^2}{2}=0 \rightarrow t_п = \sqrt{\frac{2a}{g}}
+	
+	v_к=-gt=-\sqrt{2gh}
 
 	
 	
