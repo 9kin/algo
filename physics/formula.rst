@@ -41,7 +41,7 @@ _________________________________________
 
 	t_{под} = \frac{v_0 \sin \alpha}{g}
 	
-	H_{max} = y(при t =t_{под}) = v \sin \alpha t_{под} - \frac{g * t_{под} ^ 2}{2}  = v_o \sin \alpha * \frac{v_0 \sin \alpha}{g} - \frac{g}{2} * \frac{v_0 ^ 2 \sin ^ 2  \alpha}{g^2} = \frac{v_0 ^ 2 \sin ^ 2 \alpha}{2}
+	H_{max} = y(при t =t_{под}) = v \sin \alpha t_{под} - \frac{g * t_{под} ^ 2}{2}  = v_o \sin \alpha * \frac{v_0 \sin \alpha}{g} - \frac{g}{2} * \frac{v_0 ^ 2 \sin ^ 2  \alpha}{g^2} = \frac{v_0 ^ 2 \sin ^ 2 \alpha}{2g}
 
 _________________________________________
 
