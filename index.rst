@@ -1,8 +1,11 @@
 algo
 """"""""
 
-`формулы <physics/formula.html>`_
+`sublime <sublime%20text.html>`_
 
+`скорость <physics/v.html>`_
+
+`формулы <physics/formula.html>`_
 
 TODO
 ~~~~~
@@ -48,7 +51,7 @@ Data Structures
 	* `DSU <data_structures/dsu.html>`_  100 Алгоритм Крускала (code)
 
 
-	* Fenwick Tree
+	* `Fenwick Tree <data_structures/fenwick_tree.html>`_
 
 	* Sqrt Decomposition
 
