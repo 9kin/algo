@@ -1,6 +1,8 @@
 algo
 """"""""
 
+`геометрия <geometry/coordinate.html>`_
+
 `sublime <sublime%20text.html>`_
 
 `скорость <physics/v.html>`_
